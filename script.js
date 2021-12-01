@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     disable_submit();
 
-    document.getElementById("onlyNumber").addEventListener("input", function (e) {
+    document.getElementById("rupiah").addEventListener("input", function (e) {
         if (e.target.value != "") {
             document.getElementById("full_name").disabled = false;
             document.getElementById("email").disabled = false;
@@ -70,5 +70,28 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("donasi_button").style = 'background: #dddddd';
         document.getElementById("donasi_link").href = '#';
         document.getElementById("donasi_link").onclick = function () { return false; };
+    }
+
+    var rupiah = document.getElementById("rupiah");
+    rupiah.addEventListener("keyup", function(e) {
+    rupiah.value = formatRupiah(this.value, "");
+    });
+
+    /* Fungsi formatRupiah */
+    function formatRupiah(angka, prefix) {
+    var number_string = angka.replace(/[^,\d]/g, "").toString(),
+        split = number_string.split(","),
+        sisa = split[0].length % 3,
+        rupiah = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+    // tambahkan titik jika yang di input sudah menjadi angka ribuan
+    if (ribuan) {
+        separator = sisa ? "." : "";
+        rupiah += separator + ribuan.join(".");
+    }
+
+    rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+    return prefix == undefined ? rupiah : rupiah ? " " + rupiah : "";
     }
 });
