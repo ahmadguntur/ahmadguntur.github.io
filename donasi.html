@@ -2,7 +2,8 @@
 <head>
     <title>Donasi Hutanku </title>
         <link rel="shortcut icon" type="image/png" href="favicon.png">
-        <link rel="stylesheet" href="style.css">    
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 </head>
 <body>
     <script type="text/javascript" src="script.js"></script>
@@ -55,20 +56,20 @@
                                     <div class="rownominal">
                                         <div class="input-group">
                                             <div class="input-group-addon">Rp</div>
-                                            <input class="form-control" name="amount" 
-                                            type="number" placeholder="Nominal" id="onlyNumber" value="">
+                                            <input class="form-control" title="nominal" name="amount" 
+                                            type="text" placeholder="Nominal" id="rupiah" value="">
                                         </div>
                                         </div>
                                         <div class="formnama">
                                             <label>Nama</label>
-                                            <input type="text" name="full_name" class="form-control input-lg" 
+                                            <input type="text" title="nama" name="full_name" class="form-control input-lg" 
                                             placeholder="Nama lengkap" value="" id="full_name" disabled>
                                             </div>
                                         </div>
                                         <div class="formemail">
                                             <label>Email</label>
                                             <div class="form-group" id="emailGroup">
-                                            <input type="email" name="email" class="form-control input-lg"
+                                            <input type="email" title="email" name="email" class="form-control input-lg"
                                             placeholder="Email aktif" value="" id="email" disabled>
                                             <span id="emailMessage"></span>
                                             </div>
@@ -76,15 +77,15 @@
                                         <div class="formphone">
                                             <label>Nomor telp. / Whatsapp</label>
                                             <div class="form-group" id="phoneGroup">
-                                            <input type="number" name="phone" class="form-control input-lg" 
-                                            placeholder="Nomor telp. / Whatsapp" title="Phone" autocomplete="off" value="" 
+                                            <input type="number" title="phone" name="phone" class="form-control input-lg" 
+                                            placeholder="Nomor telp. / Whatsapp" autocomplete="off" value="" 
                                             id="phone" disabled>
                                             <span class="" id="phoneMessage"></span>
                                             </div>
                                         </div>
                                         <div class="formkomentar">
                                             <label>Komentar</label>
-                                            <textarea name="comment" placeholder="Komentar akan ditampilkan pada kampanye alam yang kamu donasikan (optional)" 
+                                            <textarea name="comment" title="comment" placeholder="Komentar akan ditampilkan pada kampanye alam yang kamu donasikan (optional)" 
                                             class="form-control input-lg" rows="5" value="" id="comment" disabled></textarea>
                                         </div>
                                         <div class="centerbutton">
