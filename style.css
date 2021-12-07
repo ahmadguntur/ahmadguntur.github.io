@@ -418,7 +418,7 @@ input::-webkit-inner-spin-button {
     float: left;
     width: 69.8%;
     margin-left: 16.66666667%;
-    padding-bottonm: 20px;
+    padding-bottom: 20px;
 }
 
 .formkomentar textarea{
@@ -480,11 +480,11 @@ textarea:disabled {
 }
 
 .team{
-    font-size: 30px;
+    font-size: 60px;
     font-family: 'CharterReg';
-    color: honeydew;
+    color: rgb(0, 0, 0);
     padding-top: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .about-section {
@@ -542,7 +542,7 @@ textarea:disabled {
 }
 
 .img-profile{
-    border-radius: 10px;
+    border-radius: 50px;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
